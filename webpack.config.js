@@ -1,39 +1,40 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const isProduction = process.env.NODE_ENV === 'production';
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const PugPlugin = require('pug-plugin');
 
 module.exports = {
   mode: isProduction ? 'production' : 'development',
   entry: {
-    docs: path.resolve(__dirname, './assets/index.css'),
+    index: path.resolve(__dirname, './src/views/index.pug'),
   },
   output: {
-    path: path.resolve(__dirname, './dist/'),
-    filename: isProduction ? '[name].[hash].js' : '[name].js',
-    chunkFilename: isProduction ? '[id].[hash].js' : '[id].js',
+    path: path.join(__dirname, 'docs/'),
+    publicPath: '/',
+    filename: 'assets/[name].[contenthash:8].css'
   },
   module: {
     rules: [
       {
         test: /\.css$/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              hmr: process.env.NODE_ENV === 'development',
-            },
-          },
           'css-loader',
           'postcss-loader',
         ]
-      }
+      },
+      {
+        test: /\.pug$/,
+        loader: PugPlugin.loader
+        //☝🏽 Load Pug files
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin({
-      filename: isProduction ? '[name].[hash].css' : '[name].css'
-    }),
+    new PugPlugin({
+      pretty: true,
+    })
   ],
 };
