@@ -1,0 +1,37 @@
+{
+  "name": "henriksz.github.io",
+  "version": "0.0.1",
+  "description": "HenrikSZ's personal website",
+  "main": "n",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "prod": "NODE_ENV=production npx webpack",
+    "dev": "NODE_ENV=development npx webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HenrikSZ/henriksz.github.io.git"
+  },
+  "author": "Henrik Sven Zimmermann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HenrikSZ/henriksz.github.io/issues"
+  },
+  "homepage": "https://github.com/HenrikSZ/henriksz.github.io#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.3",
+    "cssnano": "^6.0.0",
+    "mini-css-extract-plugin": "^2.7.5",
+    "postcss": "^8.4.21",
+    "postcss-loader": "^7.1.0",
+    "postcss-nested": "^6.0.1",
+    "style-loader": "^3.3.2",
+    "tailwindcss": "^3.3.0",
+    "webpack": "^5.77.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
