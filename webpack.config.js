@@ -8,9 +8,8 @@ module.exports = {
     index: path.resolve(__dirname, './src/views/index.pug'),
   },
   output: {
-    path: path.join(__dirname, 'docs/'),
+    path: path.join(__dirname, 'dist/'),
     publicPath: '/',
-    filename: 'assets/[name].[contenthash:8].css'
   },
   module: {
     rules: [
@@ -19,12 +18,11 @@ module.exports = {
         use: [
           'css-loader',
           'postcss-loader',
-        ]
+        ],
       },
       {
         test: /\.pug$/,
         loader: PugPlugin.loader
-        //☝🏽 Load Pug files
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -35,6 +33,9 @@ module.exports = {
   plugins: [
     new PugPlugin({
       pretty: true,
+      css: {
+        filename: '[name].[contenthash:8].css',
+      },
     })
   ],
 };
