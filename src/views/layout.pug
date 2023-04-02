@@ -1,0 +1,14 @@
+mixin header-button(link, icon)
+  a(href=link class="p-4 flex items-center justify-center hover:bg-slate-800")
+    img(src=icon, class="lg:w-10 w-20 flex-1")
+
+html
+  head
+    title HenrikSZ's personal website
+    link(href=require('../styles/index.css') rel='stylesheet')
+  body(class="bg-[#460e0a] text-slate-100")
+  div(class="flex items-center justify-center bg-black")
+    div(class="flex gap-4")
+      block header
+  div(class="flex-none lg:flex p-8")
+    block content
