@@ -2,3 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+@layer base {
+  h1 {
+    @apply lg:text-7xl text-8xl font-montserrat
+  }
+
+  h3 {
+    @apply ml-8 lg:text-3xl text-4xl italic font-montserrat
+  }
+
+  h2 {
+    @apply p-4 lg:pr-40 lg:text-2xl text-4xl font-montserrat
+  }
+}

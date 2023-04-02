@@ -1,22 +1,19 @@
-html
-  head
-    title HenrikSZ's personal website
-    link(href=require('../styles/index.css') rel='stylesheet')
-  body(class="py-2 bg-[#460e0a] text-slate-100")
-  div(class="flex items-center justify-center")
-    div(class="mb-8 flex gap-4")
-      a(href="http://github.com/HenrikSZ" class="hover:border-blue-200 hover:text-blue-200 border-b-4 py-2 px-4 gap-2 text-xl flex items-center")
-        div(class="flex-1") GitHub
-        div
-          img(src=require("../../assets/graphics/github-mark-white.svg"), class="w-6 flex-1")
-      a(href="http://linkedin.com/in/henrikszimmermann" class="hover:border-blue-200 hover:text-blue-200 border-b-4 py-2 px-4 gap-2 text-xl flex items-center")
-        div(class="flex-1") LinkedIn
-        div
-          img(src=require("../../assets/graphics/LI-In-Bug.png"), class="w-6 flex-1")
-  div(class="flex-none md:flex p-8")
-    div(class="flex-3 p-2")
-      h1(class="ml-8 text-3xl italic font-montserrat") Henrik S. Zimmermann
-      h1(class="text-7xl font-montserrat") Aspiring Software Developer on the Web and elsewhere
-      p(class="p-4 pr-40 text-2xl font-montserrat") I am a Computer Science student at the University of Toronto. As a former intern at Onapsis, work student for a Toronto-based startup, and curator of my own projects, I developed high-quality software for many purposes. In addition, I pass on my experience to newcomers to the developer community as a Teaching Assistant for foundational Computer Science courses at the University of Toronto Mississauga.
-    div(class="flex-2")
-      img(src=require("../../assets/graphics/me.jpeg"))
+extends layout.pug
+
+block header
+  +header-button(
+    "http://github.com/HenrikSZ",
+    require('../../assets/graphics/github-mark-white.svg')
+  )
+  +header-button(
+    "http://linkedin.com/in/henrikszimmermann",
+    require('../../assets/graphics/LI-In-Bug.png')
+  )
+
+block content
+  div(class="flex-3 p-2")
+    h3 Henrik S. Zimmermann
+    h1 Aspiring Software Developer on the Web and elsewhere
+    h2 I am a Computer Science student at the University of Toronto. As an intern at Onapsis, work student for a Toronto-based startup, and curator of my own projects, I developed high-quality software for many purposes. In addition, I pass on my experience to newcomers to the developer community as a Teaching Assistant for foundational Computer Science courses at the University of Toronto Mississauga.
+  div(class="flex-2 flex justify-center items-start")
+    img(src=require("../../assets/graphics/me.jpeg") class="object-contain")
