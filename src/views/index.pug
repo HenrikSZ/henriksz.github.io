@@ -11,9 +11,25 @@ block header
   )
 
 block content
-  div(class="flex-3 p-2")
-    h3 Henrik S. Zimmermann
-    h1 Aspiring Software Developer on the Web and elsewhere
-    h2 I am a Computer Science student at the University of Toronto. As an intern at Onapsis, work student for a Toronto-based startup, and curator of my own projects, I developed high-quality software for many purposes. In addition, I pass on my experience to newcomers to the developer community as a Teaching Assistant for foundational Computer Science courses at the University of Toronto Mississauga.
-  div(class="flex-2 flex justify-center items-start")
-    img(src=require("../../assets/graphics/me.jpeg") class="object-contain")
+  div(class="flex-none lg:flex p-8")
+    div(class="flex-3 p-2")
+      h3 Henrik S. Zimmermann
+      h1 Aspiring Software Developer on the Web and elsewhere
+      h2 I am a Computer Science student at the University of Toronto. As an intern at Onapsis, work student for a Toronto-based startup, and curator of my own projects, I developed high-quality software for many purposes. In addition, I pass on my experience to newcomers to the developer community as a Teaching Assistant for foundational Computer Science courses at the University of Toronto Mississauga.
+    div(class="flex-2 flex justify-center items-start")
+      img(src=require("../../assets/graphics/me.jpeg") class="object-contain")
+  div(class="xl:px-32 px-4")
+    h1 Projects
+    div(class="mx-4")
+      +project(
+        "Personal Website",
+        ["Webpack", "Pug", "CD with GitHub Actions"],
+        "https://github.com/HenrikSZ/henriksz.github.io",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio nulla, tincidunt eget urna et, sodales congue orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam magna odio, dapibus eget finibus vel, dictum eget mauris. In maximus nulla pulvinar, ullamcorper lorem sed, iaculis nisl. Donec et nibh eget libero congue fermentum id egestas sapien. Morbi aliquet blandit mi. Integer ornare porttitor nibh ut congue. Vestibulum a posuere nisl. Sed interdum felis quis odio tempus, eget volutpat velit accumsan. In in accumsan neque, in pharetra justo. Donec pellentesque elit non leo mollis, ac dignissim dolor consequat. Proin vitae erat eros. Aenean commodo ligula est, et ornare nulla venenatis vel. Proin nunc tortor, luctus vel massa a, aliquet varius erat."
+      )
+      +project(
+        "NodeDynDNS",
+        ["NodeJS", "JavaScript", "DNS"],
+        "https://github.com/HenrikSZ/henriksz.github.io",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio nulla, tincidunt eget urna et, sodales congue orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam magna odio, dapibus eget finibus vel, dictum eget mauris. In maximus nulla pulvinar, ullamcorper lorem sed, iaculis nisl. Donec et nibh eget libero congue fermentum id egestas sapien. Morbi aliquet blandit mi. Integer ornare porttitor nibh ut congue. Vestibulum a posuere nisl. Sed interdum felis quis odio tempus, eget volutpat velit accumsan. In in accumsan neque, in pharetra justo. Donec pellentesque elit non leo mollis, ac dignissim dolor consequat. Proin vitae erat eros. Aenean commodo ligula est, et ornare nulla venenatis vel. Proin nunc tortor, luctus vel massa a, aliquet varius erat."
+      )
