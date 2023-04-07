@@ -11,9 +11,54 @@ block header
   )
 
 block content
-  div(class="flex-3 p-2")
-    h3 Henrik S. Zimmermann
-    h1 Aspiring Software Developer on the Web and elsewhere
-    h2 I am a Computer Science student at the University of Toronto. As an intern at Onapsis, work student for a Toronto-based startup, and curator of my own projects, I developed high-quality software for many purposes. In addition, I pass on my experience to newcomers to the developer community as a Teaching Assistant for foundational Computer Science courses at the University of Toronto Mississauga.
-  div(class="flex-2 flex justify-center items-start")
-    img(src=require("../../assets/graphics/me.jpeg") class="object-contain")
+  div(class="flex-none lg:flex p-8")
+    div(class="flex-3 p-2")
+      h3(class="text-[#ebc462]") Henrik S. Zimmermann
+      h1 Aspiring Software Developer on the Web and elsewhere
+      h2 I am a Computer Science student at the University of Toronto. As an intern at Onapsis, work student for a Toronto-based startup, and curator of my own projects, I developed high-quality software for many purposes. In addition, I pass on my experience to newcomers to the developer community as a Teaching Assistant for foundational Computer Science courses at the University of Toronto Mississauga.
+    div(class="flex-2 flex justify-center items-start")
+      img(src=require("../../assets/graphics/me.jpeg") class="object-contain")
+  div(class="xl:px-32 px-4")
+    h1 Projects
+    h3 a selection
+    div(class="mx-4")
+      +project(
+        "Personal Website",
+        ["Webpack", "Pug", "TailwindCSS", "CD with GitHub Actions"],
+        "https://github.com/HenrikSZ/henriksz.github.io",
+        "A website that is simple and accessible, that was still missing from my portfolio. The build process \
+        is straightforward and the website is automatically deployed thanks to GitHub Actions. \
+        I guess this fulfills the principle of every tool having a purpose. No complex React components, Gatsby, or any \
+        backend. A static site that is easy to update is all I needed for this project. Check it out."
+      )
+      +project(
+        "NodeDynDNS",
+        ["NodeJS", "JavaScript", "DNS Protocol"],
+        "https://github.com/HenrikSZ/NodeDynDNS",
+        "Don't ask me why I created my own dynamic DNS server. And then for Node. Anyways, I wanted a simple, \
+        but secure enough solution. Well, I don't think it is good enough for your high performance and resilience needs, \
+        but it was a fun project. Read more about the origin story and look at the source code."
+      )
+      +project(
+        "BluffServer",
+        ["NodeJS", "JavaScript", "SocketIO"],
+        "https://github.com/HenrikSZ/BluffServer",
+        "One of my earlier projects. I implemented a board game my family played a lot. \
+        It works, and you can play it with your friends. There is information and a link on the GitHub page."
+      )
+      +project(
+        "HuffmanEncoding",
+        ["C", "CMake"],
+        "https://github.com/HenrikSZ/HuffmanEncoding",
+        "An adaptation of a course assignment. Yes, Python can be slow, as I saw first-hand when implementing \
+        the Huffman compression algorithm. So, I took a weekend to write the whole thing again, this time in C. \
+        Much better, 50x speedup, can't complain. Have fun browsing through the code!"
+      )
+      +project(
+        "no-pain",
+        ["C++", "Bazel", "googletest"],
+        "https://github.com/HenrikSZ/no-pain",
+        "Let's create our own, painfully-to-work-with scripting language! That's what two friends and me thought \
+        for the deerhacks 2022 hackathon. So, we did it. Oh wonder, it was horrible to work with. So, I recreated it \
+        with proper syntax. Enjoy!"
+      )
