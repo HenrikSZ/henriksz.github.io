@@ -1,6 +1,6 @@
 mixin header-button(link, icon, alt)
   a(href=link class="p-4 flex items-center justify-center hover:bg-slate-800")
-    img(src=icon, class="lg:w-10 w-20 flex-1" alt=alt)
+    img(src=icon, class="lg:w-10 w-14 flex-1" alt=alt)
 
 mixin project(title, technologies, link, description)
   div(class="mb-12")
@@ -15,6 +15,14 @@ mixin project(title, technologies, link, description)
             li(class="text-lg") #{tech}
       div(class="p-4 lg:pl-8 lg:pt-4 pt-8 lg:flex-5 text-xl") #{description}
 
+mixin experience(title, company, time, place, description)
+  div(class="mb-12")
+    div(class="my-4")
+      div(class="text-3xl flex text-[#ebc462]") #{title}
+      div(class="text-lg") #{company}
+      div(class="text-md italic") #{place} / #{time}
+    div(class="text-xl") #{description}
+
 doctype html
 html(lang="en")
   head
@@ -28,4 +36,4 @@ html(lang="en")
       block header
   block content
   div(class="flex items-center justify-center bg-black")
-    div(class="py-4 text-lg") &copy; Henrik Zimmermann
+    div(class="py-4 text-lg") &copy; Henrik S. Zimmermann
