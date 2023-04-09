@@ -3,11 +3,13 @@ extends layout.pug
 block header
   +header-button(
     "http://github.com/HenrikSZ",
-    require('../../assets/graphics/github-mark-white.svg')
+    require('../../assets/graphics/github-mark-white.svg'),
+    "GitHub Logo"
   )
   +header-button(
     "http://linkedin.com/in/henrikszimmermann",
-    require('../../assets/graphics/LI-In-Bug.png')
+    require('../../assets/graphics/LI-In-Bug.png'),
+    "LinkedIn Logo"
   )
 
 block content
@@ -17,7 +19,7 @@ block content
       h1 Aspiring Software Developer on the Web and elsewhere
       h2 I am a Computer Science student at the University of Toronto. As an intern at Onapsis, work student for a Toronto-based startup, and curator of my own projects, I developed high-quality software for many purposes. In addition, I pass on my experience to newcomers to the developer community as a Teaching Assistant for foundational Computer Science courses at the University of Toronto Mississauga.
     div(class="flex-2 flex justify-center items-start")
-      img(src=require("../../assets/graphics/me.jpeg") class="object-contain")
+      img(src=require("../../assets/graphics/me.jpeg") class="object-contain" alt="Me")
   div(class="xl:px-32 px-4")
     h1 Projects
     h3 a selection
