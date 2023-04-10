@@ -2,6 +2,10 @@
 My personal website containing (soon) a portfolio of my work.
 
 ## Changelog
+### v0.0.4
+- Added experience mixin and layout in Pug
+- Added experience content
+
 ### v0.0.3
 - Added project mixin and layout in Pug
 - Added project content

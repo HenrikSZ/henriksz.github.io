@@ -3,11 +3,13 @@ extends layout.pug
 block header
   +header-button(
     "http://github.com/HenrikSZ",
-    require('../../assets/graphics/github-mark-white.svg')
+    require('../../assets/graphics/github-mark-white.svg'),
+    "GitHub Logo"
   )
   +header-button(
     "http://linkedin.com/in/henrikszimmermann",
-    require('../../assets/graphics/LI-In-Bug.png')
+    require('../../assets/graphics/LI-In-Bug.png'),
+    "LinkedIn Logo"
   )
 
 block content
@@ -17,10 +19,11 @@ block content
       h1 Aspiring Software Developer on the Web and elsewhere
       h2 I am a Computer Science student at the University of Toronto. As an intern at Onapsis, work student for a Toronto-based startup, and curator of my own projects, I developed high-quality software for many purposes. In addition, I pass on my experience to newcomers to the developer community as a Teaching Assistant for foundational Computer Science courses at the University of Toronto Mississauga.
     div(class="flex-2 flex justify-center items-start")
-      img(src=require("../../assets/graphics/me.jpeg") class="object-contain")
+      img(src=require("../../assets/graphics/me.jpeg") class="object-contain" alt="Me")
   div(class="xl:px-32 px-4")
     h1 Projects
-    h3 a selection
+    h3 a selection - anything else I published is on my 
+      a(href="https://github.com/HenrikSZ" class="text-blue-400 underline" target="_blank") GitHub Profile
     div(class="mx-4")
       +project(
         "Personal Website",
@@ -61,4 +64,27 @@ block content
         "Let's create our own, painfully-to-work-with scripting language! That's what two friends and me thought \
         for the deerhacks 2022 hackathon. So, we did it. Oh wonder, it was horrible to work with. So, I recreated it \
         with proper syntax. Enjoy!"
+      )
+  div(class="xl:px-32 px-4")
+    h1 Experience
+    h3 where I currently work - to dig in my past visit my 
+      a(href="https://www.linkedin.com/in/henrikszimmermann" class="text-blue-400 underline" target="_blank") LinkedIn Profile
+    div(class="mx-4")
+      +experience(
+        "Teaching Assistant for Foundational Computer Science Courses",
+        "University of Toronto Mississauga",
+        "September 2022 - April 2023",
+        "Mississauga",
+        "I am teaching the basics of programming in Python and assisting students with designing their first applications. \
+        This includes faciliating labs/tutorials in which students work on assigned problems, hosting office hours \
+        to provide one-on-one support, and grading exams."
+      )
+    div(class="mx-4")
+      +experience(
+        "React Native Developer",
+        "Team Alphawit in the University of Toronto Hatchery Startup Incubator",
+        "May 2022 - March 2023",
+        "Toronto & Remote",
+        "I am wearing many different hats from scraping script kiddie to working on the big boy \
+        React Native app."
       )
