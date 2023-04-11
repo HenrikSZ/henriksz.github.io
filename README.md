@@ -2,6 +2,9 @@
 My personal website containing (soon) a portfolio of my work.
 
 ## Changelog
+### v0.0.5
+- Fixed font sizes and more dimensions for small screens.
+
 ### v0.0.4
 - Added experience mixin and layout in Pug
 - Added experience content
