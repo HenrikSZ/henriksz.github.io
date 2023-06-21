@@ -2,6 +2,10 @@
 My personal website containing (soon) a portfolio of my work.
 
 ## Changelog
+### v0.0.6
+- Updated experience with uhn job.
+- Put current experience before projects.
+
 ### v0.0.5
 - Fixed font sizes and more dimensions for small screens.
 
