@@ -5,7 +5,7 @@ mixin header-button(link, icon, alt)
 mixin project(title, technologies, link, description)
   div(class="mb-12")
     div(class="my-4")
-      a(href=link class="text-3xl text-[#ebc462]" target="_blank")
+      a(href=link class="text-3xl text-[#ebc462] p-1 hover:bg-orange-900 rounded-md" target="_blank")
         div(class="inline-block") #{title}
         img(src=require("../../assets/graphics/fa-goto.svg") class="w-4 h-4 ml-1 inline-block align-top" alt="External Link")
     div(class="lg:flex flex-none")
