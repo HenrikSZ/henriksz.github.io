@@ -1,5 +1,5 @@
 mixin header-button(link, icon, alt)
-  a(href=link class="p-4 flex items-center justify-center hover:bg-slate-800")
+  a(href=link class="p-4 flex items-center justify-center hover:bg-orange-900 rounded-md")
     img(src=icon, class="w-10 flex-1" alt=alt)
 
 mixin project(title, technologies, link, description)
@@ -30,10 +30,10 @@ html(lang="en")
     link(href=require('../styles/index.css') rel='stylesheet')
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width")
-  body(class="bg-[#460e0a] text-slate-100")
-  div(class="flex items-center justify-center bg-black")
-    div(class="flex gap-4")
-      block header
-  block content
-  div(class="flex items-center justify-center bg-black")
-    div(class="py-4 text-lg") &copy; Henrik S. Zimmermann
+  body(class="bg-[#420808] text-slate-200")
+    div(class="flex items-center justify-center")
+      div(class="flex gap-4")
+        block header
+    block content
+    div(class="flex items-center justify-center bg-black")
+      div(class="py-4 text-lg") &copy; Henrik S. Zimmermann

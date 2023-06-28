@@ -9,7 +9,7 @@
   }
 
   h3 {
-    @apply ml-8 lg:text-3xl sm:text-xl text-lg italic font-montserrat
+    @apply ml-8 lg:text-2xl text-lg italic font-montserrat
   }
 
   h2 {

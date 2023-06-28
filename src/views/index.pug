@@ -13,28 +13,44 @@ block header
   )
 
 block content
-  div(class="flex-none lg:flex p-8")
+  div(class="flex-none lg:flex p-12")
     div(class="flex-3 p-2")
       h3(class="text-[#ebc462]") Henrik S. Zimmermann
       h1 Aspiring Software Developer on the Web and elsewhere
-      h2 I am a Computer Science student at the University of Toronto. As an intern at Onapsis, work student for a Toronto-based startup, and curator of my own projects, I developed high-quality software for many purposes. In addition, I pass on my experience to newcomers to the developer community as a Teaching Assistant for foundational Computer Science courses at the University of Toronto Mississauga.
+      h2
+        | Primarily, I am a Computer Science student at the University of Toronto.
+        | But beside that, I am contributing to business and security software, websites,
+        | and healthcare apps. Behind the scenes, I am getting my hands dirty 
+        | with DevOps for my own services. In addition, I pass on my experience
+        | to newcomers to the developer community as a a Teaching Assistant for
+        | foundational Computer Science courses. I also help aspiring
+        | biologists and chemists present on a website their discoveries in a competition.
     div(class="flex-2 flex justify-center items-start")
       img(src=require("../../assets/graphics/me.jpeg") class="object-contain" alt="Me")
   div(class="xl:px-64 lg:px-32 md:px-16 px-2")
-    h1 Experience
+    h1 Current Works
     h3 where I currently work - to dig in my past visit my 
       a(href="https://www.linkedin.com/in/henrikszimmermann" class="text-blue-400 underline" target="_blank") LinkedIn Profile
     div(class="mx-4")
       +experience(
+        "Web Developer",
+        "iGEM Toronto",
+        "June 2023 - October 2023",
+        "Toronto",
+        "As a member with a background in software engineering, I build tools and the website so that \
+        lab members can present their discoveries with ease"
+      )
+    div(class="mx-4")
+      +experience(
         "Summer Research Student",
-        "Intelligent Assistive Technology and Systems Lab (IATSL), KITE Reserach Department, University Health Network (UHN)",
+        "Intelligent Assistive Technology and Systems Lab (IATSL), KITE Research Department, University Health Network (UHN)",
         "May 2023 - August 2023",
         "Toronto",
         "I am creating a framework that eases development of motor rehabiliation games, mainly for stroke patients. Different \
         ML Models are connected to analysis modules and games."
       )
   div(class="xl:px-64 lg:px-32 md:px-16 px-2")
-    h1 Projects
+    h1 Personal Projects
     h3 a selection - anything else I published is on my 
       a(href="https://github.com/HenrikSZ" class="text-blue-400 underline" target="_blank") GitHub Profile
     div(class="lg:mx-4 mx-2")
