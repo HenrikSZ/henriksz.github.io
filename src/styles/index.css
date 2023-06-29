@@ -13,6 +13,10 @@
   }
 
   h2 {
-    @apply lg:p-4 p-2 lg:pr-40 lg:text-2xl sm:text-xl text-lg font-montserrat
+    @apply lg:p-4 p-2 lg:text-2xl sm:text-xl text-lg font-montserrat
+  }
+
+  .section-container {
+    @apply xl:px-64 lg:px-32 md:px-16 px-4 py-6
   }
 }
