@@ -1,7 +1,16 @@
 # Personal Website
-My personal website containing (soon) a portfolio of my work.
+My personal website containing a portfolio of my work.
 
 ## Changelog
+### v0.0.8
+- Moved lengthy intro text to About Me section
+- Changed layout to better deal with spacing.
+
+### v0.0.7
+- Added iGEM experience.
+- Improved intro text.
+- Removed black header banner.
+
 ### v0.0.6
 - Updated experience with uhn job.
 - Put current experience before projects.

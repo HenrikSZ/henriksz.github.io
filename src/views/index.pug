@@ -13,22 +13,28 @@ block header
   )
 
 block content
-  div(class="flex-none lg:flex p-12")
-    div(class="flex-3 p-2")
-      h3(class="text-[#ebc462]") Henrik S. Zimmermann
-      h1 Aspiring Software Developer on the Web and elsewhere
+  div(class="flex lg:flex-row flex-col md:p-8")
+    div(class="flex flex-3 p-2 items-stretch")
+      div(class="m-auto")
+        h3(class="text-[#ebc462]") Henrik S. Zimmermann
+        h1 Software Developer
+        h2(class="lg:pr-40")
+          | I am a Computer Scient student with hands-on experience ranging from
+          | microcontrollers to web apps eager to learn new technologies.
+    div(class="flex-2 flex justify-center items-start p-2")
+      img(src=require("../../assets/graphics/me.jpeg") class="object-contain" alt="Me")
+  div(class="section-container")
+    h1 About Me
       h2
         | Primarily, I am a Computer Science student at the University of Toronto.
         | But beside that, I am contributing to business and security software, websites,
         | and healthcare apps. Behind the scenes, I am getting my hands dirty 
-        | with DevOps for my own services. I also pass on my experience
+        | with administration for my own services. I also pass on my experience
         | to newcomers to the developer community as a a Teaching Assistant for
         | foundational Computer Science courses. Outside of the software community, I help aspiring
         | biologists and chemists present on a website their discoveries in a competition.
-    div(class="flex-2 flex justify-center items-start")
-      img(src=require("../../assets/graphics/me.jpeg") class="object-contain" alt="Me")
-  div(class="xl:px-64 lg:px-32 md:px-16 px-2")
-    h1 Current Works
+  div(class="section-container")
+    h1 Current Jobs
     h3 where I currently work - to dig in my past visit my 
       a(href="https://www.linkedin.com/in/henrikszimmermann" class="text-blue-400 underline" target="_blank") LinkedIn Profile
     div(class="mx-4")
@@ -38,7 +44,7 @@ block content
         "June 2023 - October 2023",
         "Toronto",
         "As a member with a background in software engineering, I build tools and the website so that \
-        lab members can present their discoveries with ease"
+        lab members can present their discoveries with ease."
       )
     div(class="mx-4")
       +experience(
@@ -51,7 +57,7 @@ block content
         mainly for stroke patients. Different \
         ML Models are connected to analysis modules and games."
       )
-  div(class="xl:px-64 lg:px-32 md:px-16 px-2")
+  div(class="section-container")
     h1 Personal Projects
     h3 a selection - anything else I published is on my 
       a(href="https://github.com/HenrikSZ" class="text-blue-400 underline" target="_blank") GitHub Profile
