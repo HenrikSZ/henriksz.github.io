@@ -2,6 +2,10 @@
 My personal website containing a portfolio of my work.
 
 ## Changelog
+### v0.0.9
+- Fixed two typoes
+- Changed color palette
+
 ### v0.0.8
 - Moved lengthy intro text to About Me section
 - Changed layout to better deal with spacing.

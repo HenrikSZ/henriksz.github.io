@@ -12,6 +12,12 @@ module.exports = {
         'montserrat': ['Montserrat', 'sans-serif']
       },
     },
+    colors: {
+      'bordeaux': '#3D0D12',
+      'richblack': '#011124',
+      'light': '#F4FFFD',
+      'orange': '#F9DC5C',
+    },
   },
   plugins: [],
 }
