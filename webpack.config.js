@@ -25,7 +25,7 @@ module.exports = {
         loader: PugPlugin.loader
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|webmanifest)$/i,
         type: 'asset/resource',
       },
     ]

@@ -15,13 +15,18 @@ mixin project(title, technologies, link, description)
             li(class="text-lg") #{tech}
       div(class="p-4 lg:pl-8 lg:pt-4 pt-8 lg:flex-5 text-xl") #{description}
 
-mixin experience(title, company, time, place, description)
+mixin experience(title, company, time, place, description, link="")
   div(class="mb-12")
     div(class="my-4")
       div(class="text-3xl flex text-orange") #{title}
       div(class="text-lg") #{company}
       div(class="text-md italic") #{place} / #{time}
     div(class="text-xl") #{description}
+    if link != ""
+      div
+        | See 
+        a(href=link class="text-orange hover:underline") here
+        |  for the result.
 
 doctype html
 html(lang="en")
@@ -30,6 +35,10 @@ html(lang="en")
     link(href=require('../styles/index.css') rel='stylesheet')
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width")
+    link(rel="apple-touch-icon" sizes="180x180" href=require("../../assets/favicon/apple-touch-icon.png"))
+    link(rel="icon" type="image/png" sizes="32x32" href=require("../../assets/favicon/favicon-32x32.png"))
+    link(rel="icon" type="image/png" sizes="16x16" href=require("../../assets/favicon/favicon-16x16.png"))
+    link(rel="manifest" href=require("../../assets/favicon/site.webmanifest"))
   body(class="bg-[#3D0D12] text-light")
     div(class="flex items-center justify-center")
       div(class="flex gap-4")
