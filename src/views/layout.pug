@@ -1,35 +1,45 @@
 mixin header-button(link, icon, alt)
-  a(href=link class="p-4 flex items-center justify-center hover:bg-orange-900 rounded-md")
+  a(href=link, class="p-4 hover:bg-orange-800 duration-200 flex items-center justify-center rounded-md")
     img(src=icon, class="w-10 flex-1" alt=alt)
 
 mixin project(title, technologies, link, description)
   div(class="mb-12")
     div(class="my-4")
-      a(href=link class="text-3xl text-orange p-1 hover:bg-orange-900 rounded-md" target="_blank")
+      a(href=link class="text-3xl text-myorange p-1 duration-200 hover:bg-orange-800 rounded-md" target="_blank")
         div(class="inline-block") #{title}
         img(src=require("../../assets/graphics/fa-goto.svg") class="w-4 h-4 ml-1 inline-block align-top" alt="External Link")
     div(class="lg:flex flex-none")
-      div(class="p-2 pt-4 ml-6 lg:pb-4 pb-8 lg:pr-8 border-orange lg:border-r-2 lg:border-b-0 border-b-2 lg:flex-1")
+      div(class="p-2 pt-4 ml-6 lg:pb-4 pb-8 lg:pr-8 border-myorange lg:border-r-2 lg:border-b-0 border-b-2 lg:flex-1")
         ul(class="list-outside list-disc")
           each tech in technologies
             li(class="text-lg") #{tech}
       div(class="p-4 lg:pl-8 lg:pt-4 pt-8 lg:flex-5 text-xl") #{description}
 
-mixin experience(title, company, time, place, description)
+mixin experience(title, company, time, place, description, link="")
   div(class="mb-12")
     div(class="my-4")
-      div(class="text-3xl flex text-orange") #{title}
+      div(class="text-3xl flex text-myorange") #{title}
       div(class="text-lg") #{company}
       div(class="text-md italic") #{place} / #{time}
     div(class="text-xl") #{description}
+    if link != ""
+      div
+        | See 
+        a(href=link class="text-myorange hover:underline" target="_blank") here
+        |  for the result.
 
 doctype html
 html(lang="en")
   head
     title HenrikSZ
     link(href=require('../styles/index.css') rel='stylesheet')
+    script(src=require('../script.js'))
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width")
+    link(rel="apple-touch-icon" sizes="180x180" href=require("../../assets/favicon/apple-touch-icon.png"))
+    link(rel="icon" type="image/png" sizes="32x32" href=require("../../assets/favicon/favicon-32x32.png"))
+    link(rel="icon" type="image/png" sizes="16x16" href=require("../../assets/favicon/favicon-16x16.png"))
+    link(rel="manifest" href=require("../../assets/favicon/site.webmanifest"))
   body(class="bg-[#3D0D12] text-light")
     div(class="flex items-center justify-center")
       div(class="flex gap-4")
