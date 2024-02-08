@@ -12,6 +12,7 @@ module.exports = {
             return match;
           }
         });
+        console.log(matches);
 
         return matches;
       },
@@ -27,12 +28,12 @@ module.exports = {
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif']
       },
-    },
-    colors: {
-      'bordeaux': '#3D0D12',
-      'richblack': '#011124',
-      'light': '#F4FFFD',
-      'orange': '#F9DC5C',
+      colors: {
+        'bordeaux': '#3D0D12',
+        'richblack': '#011124',
+        'light': '#F4FFFD',
+        'myorange': '#F9DC5C',
+      },
     },
   },
   plugins: [],
