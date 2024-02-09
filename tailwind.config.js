@@ -6,7 +6,7 @@ module.exports = {
       pug: (content) => {
         let matches = content.match(/[^<>"'`\s]*/g);
         matches = matches.map(match => {
-          if (match.startsWith("scroll:")) {
+          if (match.startsWith("scroll:") || match.startsWith("-scroll:")) {
             return match.substring(match.indexOf(":") + 1);
           } else {
             return match;
