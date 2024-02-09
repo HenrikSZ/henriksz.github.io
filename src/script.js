@@ -6,26 +6,34 @@ function setup() {
 }
 
 function addScollAnimationFor(element) {
-    let classList = Array.from(element.classList)
+    let toAdd = Array.from(element.classList)
         .filter(className => className.startsWith("scroll:"))
         .map(className => className.substring(className.indexOf(":") + 1));
+    let toRemove = Array.from(element.classList)
+        .filter(className => className.startsWith("-scroll:"))
+        .map(className => className.substring(className.indexOf(":") + 1));
+
+    element.classList.add(...toRemove);
 
     document.scrollAnimations.push({
         element,
         active: false,
-        classList: classList,
+        toAdd,
+        toRemove
     });
 }
 
 function scrollUpdate(event) {
     for (let item of document.scrollAnimations) {
-        let bottom = item.element.getBoundingClientRect().bottom;
-        let dist = window.innerHeight - bottom;
+        let top = item.element.getBoundingClientRect().top;
+        let dist = window.innerHeight - top;
         if (dist > 10 && !item.active) {
-            item.element.classList.add(...item.classList);
+            item.element.classList.add(...item.toAdd);
+            item.element.classList.remove(...item.toRemove);
             item.active = true;
         } else if (dist < -10 && item.active) {
-            item.element.classList.remove(...item.classList);
+            item.element.classList.remove(...item.toAdd);
+            item.element.classList.add(...item.toRemove);
             item.active = false;
         }
     }

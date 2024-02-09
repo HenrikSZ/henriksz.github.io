@@ -17,25 +17,25 @@ block content
     div(class="flex flex-3 p-2 items-stretch")
       div(class="m-auto")
         h3(class="text-[#ebc462]") Henrik S. Zimmermann
-        h1 Software Developer
+        +animated-header("Software Developer")
         h2(class="lg:pr-40")
           | I am a Computer Science student with hands-on experience ranging from
           | microcontrollers to web apps eager to learn new technologies.
     div(class="flex-2 flex justify-center items-start p-2")
       img(src=require("../../assets/graphics/me.png") class="object-contain" alt="Me")
   div(class="section-container")
-    h1(class="onscroll scroll:xl:text-7xl duration-500") About Me
-      h2
-        | Primarily, I am a Computer Science student at the University of Toronto.
-        | But beside that, I have contributed to business and security software, websites,
-        | and healthcare apps. Behind the scenes, I am getting my hands dirty 
-        | with hosting my own services. I also pass on my experience
-        | to newcomers to the developer community as a Teaching Assistant for
-        | foundational Computer Science courses. Outside of the software community,
-        | I help aspiring researchers present their discoveries on a website.
+    +animated-header("About Me")
+    h2(class="onscroll scroll:opacity-100 -scroll:opacity-0 duration-300 scroll:top-0 -scroll:top-[80px] relative")
+      | Primarily, I am a Computer Science student at the University of Toronto.
+      | But beside that, I have contributed to business and security software, websites,
+      | and healthcare apps. Behind the scenes, I am getting my hands dirty 
+      | with hosting my own services. I also pass on my experience
+      | to newcomers to the developer community as a Teaching Assistant for
+      | foundational Computer Science courses. Outside of the software community,
+      | I help aspiring researchers present their discoveries on a website.
   div(class="section-container")
-    h1(class="onscroll scroll:xl:text-7xl duration-500") Current Jobs
-    h3 where I currently work - to dig in my past visit my 
+    +animated-header("Current Jobs")
+    h3(class="onscroll scroll:ml-8 duration-500") where I currently work - to dig in my past visit my 
       a(href="https://www.linkedin.com/in/henrikszimmermann" class="text-blue-400 underline" target="_blank") LinkedIn Profile
     div(class="mx-4")
       +experience(
@@ -62,8 +62,8 @@ block content
         and grading students' course work, including the final exam."
       )
   div(class="section-container")
-    h1(class="onscroll scroll:xl:text-7xl duration-500") Personal Projects
-    h3 a selection - anything else I published is on my 
+    +animated-header("Personal Projects")
+    h3(class="onscroll scroll:ml-8 duration-500") a selection - anything else I published is on my 
       a(href="https://github.com/HenrikSZ" class="text-blue-400 underline" target="_blank") GitHub Profile
     div(class="lg:mx-4 mx-2")
       +project(

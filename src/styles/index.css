@@ -5,11 +5,11 @@
 
 @layer base {
   h1 {
-    @apply lg:text-6xl sm:text-5xl text-4xl font-montserrat
+    @apply lg:text-5xl sm:text-4xl text-3xl font-montserrat
   }
 
   h3 {
-    @apply ml-8 lg:text-2xl text-lg italic font-montserrat
+    @apply ml-16 lg:text-2xl text-lg italic font-montserrat
   }
 
   h2 {
