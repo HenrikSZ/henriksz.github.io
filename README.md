@@ -2,8 +2,11 @@
 My personal website containing a portfolio of my work.
 
 ## Changelog
+### v0.0.10
+- Updated jobs
+
 ### v0.0.9
-- Fixed two typoes
+- Fixed two typos
 - Changed color palette
 
 ### v0.0.8

@@ -12,8 +12,6 @@ module.exports = {
             return match;
           }
         });
-        console.log(matches);
-
         return matches;
       },
     }
